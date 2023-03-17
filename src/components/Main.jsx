@@ -13,7 +13,7 @@ const Main = () => {
   }, []);
 
   const getDataFromApi = async () => {
-    const { data } = await axios.get(requests.requestPopular);
+    const { data } = await axios.get(requests[0].url);
     setMovies(data.results);
   };
 

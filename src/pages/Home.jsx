@@ -1,13 +1,18 @@
-import React from 'react'
-import Main from '../components/Main'
-
+import React from "react";
+import Main from "../components/Main";
+import requests from "../Request";
+import Row from "../components/Row";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Main />
-    </div>
-  )
-}
 
-export default Home
+      {requests.map((r) => (
+        <Row title={r.title} fetchURL={r.url} />
+      ))}
+    </>
+  );
+};
+
+export default Home;
