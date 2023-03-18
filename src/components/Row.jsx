@@ -19,17 +19,16 @@ const Row = ({ title, fetchURL }) => {
   return (
     <>
       <h1 className="text-white font-bold md:text-xl p-4">{title}</h1>
-      <div className="relative flex items-center">
-      <MdChevronLeft className="bg-white rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden right-0 group-hover:block" size={40}/>
+      <div className="relative flex items-center group">
+      <MdChevronLeft className="bg-white rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block left-0 " size={40}/>
         <div id={"slider"} className="w-full h-full overflow-x-scroll scroll-smooth whitespace-nowrap scrollbar-hide"  >
           {movies.map((movie, id) => {
             return (
               <Movie movie={movie} id={id} />
-              
             );
           })}
         </div>
-        <MdChevronRight className="bg-white rounded-full opacity-50 hover:opacity-100 cursor-pointer z-10 hidden hover:block" size={40}/>
+        <MdChevronRight className="bg-white rounded-full opacity-50 hover:opacity-100 cursor-pointer z-10 hidden  group-hover:block right-0" size={40}/>
       </div>
     </>
   );
